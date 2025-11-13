@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>손영탁 - 생성형 AI 아키텍트 포트폴리오</title>
+    <!-- Tailwind CSS 로드 --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Pretendard (가장 한국적인 폰트 중 하나) --><link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Hero 섹션 배경 - 창의적이고 추상적인 느낌 */
+        #hero {
+            background: linear-gradient(135deg, #a7b6e0 0%, #87c3e5 100%); /* 부드러운 파스텔톤 그라데이션 */
+            position: relative;
+            overflow: hidden;
+        }
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M14 0L0 14V0h14zM86 0L100 14V0H86zM14 100L0 86v14h14zM86 100L100 86v14H86zM50 0L0 50l50 50 50-50L50 0z" fill="%23ffffff" opacity="0.1" fill-opacity=".1"/%3E%3C/svg%3E'); /* 추상적인 패턴 */
+            background-size: 200px;
+            opacity: 0.3;
+            animation: moveBackground 60s linear infinite alternate; /* 배경 움직임 추가 */
+        }
+        @keyframes moveBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 100%;
+            }
+        }
+        section {
+            scroll-margin-top: 80px;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- 상단 네비게이션 바 --><header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-700 hover:text-blue-800 transition duration-300">손영탁</a>
+            <div class="space-x-4">
+                <a href="#about" class="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition duration-300">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition duration-300">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition duration-300">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 메인 콘텐츠 --><main class="mt-20">
+
+        <!-- Hero 섹션 --><section id="hero" class="relative py-32 text-white">
+            <div class="container mx-auto px-6 text-center relative z-10 fade-in">
+                <h1 class="text-6xl font-extrabold mb-5 leading-tight">생성형 AI의 <br> 가능성을 설계하는</h1>
+                <p class="text-3xl font-medium opacity-95">
+                    <span class="text-blue-200">손영탁</span>입니다.
+                    <!-- TODO: 이 곳에 '내 한 줄 소개 (Hero)' 내용을 입력하세요. --></p>
+                <a href="#projects" class="mt-12 inline-block bg-white text-blue-700 hover:bg-blue-100 px-8 py-4 rounded-full text-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                    프로젝트 살펴보기
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me 섹션 --><section id="about" class="py-24 bg-white">
+            <div class="container mx-auto px-6 fade-in">
+                <h2 class="text-4xl font-bold text-center mb-16 text-blue-800">About Me</h2>
+                <div class="max-w-4xl mx-auto p-10 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl border border-blue-100">
+                    <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                        생성형 AI와 아키텍처 설계를 통해 복잡한 문제를 해결하고, 비즈니스 생산성을 극대화하는데 집중했습니다. 저는 기술이 사용자의 일상에 자연스럽게 스며들어 긍정적인 경험을 제공해야 한다고 믿습니다. 최신 기술 동향을 빠르게 학습하고 적용하여, 복잡한 문제에 대한 효율적이고 혁신적인 해결책을 제시하는 것을 즐깁니다.
+                    </p>
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        특히, 컨텍스트의 한계로 발생하는 할루시네이션 현상을 MSA와 Spec-Driven-Development (SDD)의 결합을 통해 체계적으로 해결하고자 노력했습니다. 확장 가능한 시스템 설계를 통해 AI 모델의 잠재력을 최대한 발휘하고, 빠르게 MVP를 개발하는데 노력했습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills 섹션 --><section id="skills" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 fade-in">
+                <h2 class="text-4xl font-bold text-center mb-16 text-blue-800">Skills</h2>
+                <div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+                    <!-- 프론트엔드 --><div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="text-2xl font-bold mb-5 text-blue-700 flex items-center">
+                            <svg class="w-8 h-8 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L12 19.25M12 19.25L14.25 17M12 19.25L12 4M3 8h18L18 4H6L3 8Z"></path></svg>
+                            Frontend
+                        </h3>
+                        <ul class="space-y-3 text-lg text-gray-700">
+                            <li><span class="font-semibold text-gray-800">TypeScript</span> - 현대 웹 개발을 위한 타입 안전성 확보</li>
+                        </ul>
+                    </div>
+                    <!-- 백엔드 --><div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500 hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="text-2xl font-bold mb-5 text-green-700 flex items-center">
+                            <svg class="w-8 h-8 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                            Backend
+                        </h3>
+                        <ul class="space-y-3 text-lg text-gray-700">
+                            <li><span class="font-semibold text-gray-800">Java</span> - 안정적이고 성능 좋은 서버 개발</li>
+                            <li><span class="font-semibold text-gray-800">Spring</span> - 엔터프라이즈 환경에서의 강력한 프레임워크 활용</li>
+                            <li><span class="font-semibold text-gray-800">Kafka</span> - 대용량 실시간 데이터 처리 및 비동기 통신</li>
+                            <li><span class="font-semibold text-gray-800">TTS/STT API</span> - 음성 변환 API 연동 및 활용</li>
+                        </ul>
+                    </div>
+                    <!-- DevOps & Tools --><div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-purple-500 hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="text-2xl font-bold mb-5 text-purple-700 flex items-center">
+                            <svg class="w-8 h-8 mr-3 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.525.43.913 1.026 1.066 1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            DevOps & Tools
+                        </h3>
+                        <ul class="space-y-3 text-lg text-gray-700">
+                            <li><span class="font-semibold text-gray-800">Git</span> - 버전 관리 및 협업</li>
+                            <li><span class="font-semibold text-gray-800">Docker</span> - 컨테이너 기반 배포 및 환경 일관성</li>
+                            <li><span class="font-semibold text-gray-800">Figma</span> - UI/UX 디자인 협업</li>
+                            <li><span class="font-semibold text-gray-800">Claude Code</span> - 생성형 AI 기반 개발 생산성 향상</li>
+                            <li><span class="font-semibold text-gray-800">Prompt Engineering</span> - LLM의 효과적인 활용을 위한 프롬프트 설계</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects 섹션 --><section id="projects" class="py-24 bg-white">
+            <div class="container mx-auto px-6 fade-in">
+                <h2 class="text-4xl font-bold text-center mb-16 text-blue-800">Project: Dynaram</h2>
+                
+                <div class="max-w-5xl mx-auto p-12 bg-white rounded-2xl shadow-2xl border border-gray-100">
+                    
+                    <!-- 문제 정의 --><div class="mb-12">
+                        <h3 class="text-3xl font-bold mb-6 text-blue-700 border-b-2 pb-3 border-blue-100">1. 문제 정의</h3>
+                        <p class="text-xl text-gray-700 leading-relaxed">
+                            사용자들은 등하교나 출퇴근처럼 반복되는 일상 경로를 가지고 있지만, 날씨나 교통 상황 같은 외부 요인에 따라 매번 알람 설정을 변경해야 하는 번거로움을 겪습니다. Dynaram 프로젝트는 이러한 비효율을 줄이고자 시작되었습니다.
+                        </p>
+                    </div>
+
+                    <!-- 아키텍처/설계 --><div class="mb-12">
+                        <h3 class="text-3xl font-bold mb-6 text-blue-700 border-b-2 pb-3 border-blue-100">2. 아키텍처 및 설계</h3>
+                        <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                            전체 서비스는 MSA(Microservices Architecture)를 채택하여 시스템의 유연성과 확장성을 확보했습니다. 동기 작업은 RESTful API 호출을 통해 처리하고, 비동기 작업은 Kafka를 활용한 EDA(Event-Driven Architecture)로 설계하여 효율적인 데이터 흐름을 구축했습니다.
+                        </p>
+                        <p class="text-xl text-gray-700 leading-relaxed">
+                            특히 외부 API 호출 및 데이터 파싱 모듈은 DB 없이 Stateless하게 설계하여 독립성을 높였고, (예: 교통정보 API, 날씨 API) 분산 트랜잭션의 일관성을 위해 SAGA 패턴을 적용하여 견고한 시스템을 구현했습니다. 모든 외부 의존성은 비동기 이벤트로 처리하여 시스템 전체의 응답성을 보장했습니다.
+                        </p>
+                    
+                    </div>
+
+                    <!-- 핵심 기능 --><div class="mb-12">
+                        <h3 class="text-3xl font-bold mb-8 text-blue-700 border-b-2 pb-3 border-blue-100">3. 핵심 기능</h3>
+                        <div class="space-y-8">
+                            <!-- 핵심 기능 1 --><div class="bg-blue-50 p-8 rounded-xl shadow-md border-l-4 border-blue-400">
+                                <h4 class="text-2xl font-bold mb-3 text-blue-800">SDD(Spec-Driven-Development)를 활용한 빠른 MVP 개발</h4>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    MSA의 장점(짧은 코드 라인, 장애 격리)과 SDD를 결합하여 생성형 AI의 할루시네이션을 줄이고 변경에 대한 영향을 최소화하며 유연성을 확보했습니다. 이를 통해 초기 MVP를 매우 빠르게 구축할 수 있었습니다.
+                                </p>
+                            </div>
+                            <!-- 핵심 기능 2 --><div class="bg-blue-50 p-8 rounded-xl shadow-md border-l-4 border-blue-400">
+                                <h4 class="text-2xl font-bold mb-3 text-blue-800">SAGA 패턴을 적용한 EDA(Event-Driven Architecture)</h4>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    외부 API 호출 모듈에 SAGA 패턴을 적용하여 비동기 처리의 이점을 살리면서도 분산 환경에서의 최종적인 데이터 일관성을 효과적으로 유지했습니다.
+                                </p>
+                            </div>
+                            <!-- 핵심 기능 3 (NEW) --><div class="bg-green-50 p-8 rounded-xl shadow-md border-l-4 border-green-400">
+                                <h4 class="text-2xl font-bold mb-3 text-green-800">외부 API 기반 동적 시간 계산</h4>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    실시간 대중 교통 정보 API와 기상 예보 API를 연동하여 사용자가 설정해둔 교통수단과 목적지에 도착해야하는 시간을 기반으로 예상 소요 시간을 동적으로 계산합니다. 단순한 고정 알람이 아닌, '지금 출발하면' 혹은 '비가 오니 30분 일찍'과 같이 상황에 맞는 유연한 알람을 생성 및 제공합니다.
+                                </p>
+                            </div>
+                            <!-- 핵심 기능 4 (NEW) --><div class="bg-green-50 p-8 rounded-xl shadow-md border-l-4 border-green-400">
+                                <h4 class="text-2xl font-bold mb-3 text-green-800">AI 프롬프트 기반 맞춤형 알람 및 TTS</h4>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    계산된 시간, 날씨, 사용자의 일정을 바탕으로 생성형 AI가 "오늘은 비가 오니 우산 챙기시고, 평소보다 20분 일찍 출발하세요"와 같은 자연스러운 알람 메시지 프롬프트를 생성합니다. 이 메시지를 다시 Text-To-Speech(TTS) API로 전송하여, 기계음이 아닌 친근한 음성 알람으로 사용자에게 전달합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 나의 역할 --><div class="mb-12">
+                        <h3 class="text-3xl font-bold mb-6 text-blue-700 border-b-2 pb-3 border-blue-100">4. 나의 역할 및 기여</h3>
+                        <p class="text-xl text-gray-700 leading-relaxed">
+                            Dynaram 프로젝트의 초기 기획부터 아키텍처 설계, 핵심 백엔드 로직(시간 계산, AI 프롬프트 연동) 구현, 그리고 프론트엔드 개발까지 전 과정에 참여하여 핵심적인 역할을 수행했습니다. 특히, 여러 외부 API를 안정적으로 통합하고 비동기 이벤트로 처리하여 시스템 전반의 성능과 확장성을 확보하는 데 중점을 두었습니다.
+                        </p>
+                    </div>
+
+                    <!-- 결과 및 성과 --><div class="mb-12">
+                        <h3 class="text-3xl font-bold mb-6 text-blue-700 border-b-2 pb-3 border-blue-100">5. 결과 및 성과</h3>
+                        <div class="bg-blue-100 p-8 rounded-xl border border-blue-200">
+                            <!-- TODO: 이 곳에 '결과 및 성과' 내용을 구체적으로 입력하세요. --><p class="text-xl text-gray-800 italic leading-relaxed">
+                                사용자 맞춤형 알람 시스템을 통해 출퇴근 준비 시간을 평균 15분 단축시켰습니다. <br>
+                                 AI 기반 상황 인지 알람 도입 후, 초기 사용자 100명을 대상으로 한 설문조사에서 90% 이상이 '매우 만족'을 표했습니다. <br>
+                                 MSA 및 SDD 적용으로 신규 기능(TTS, 날씨 연동) 개발 주기를 기존 대비 30% 단축할 수 있었습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 회고 --><div>
+                        <h3 class="text-3xl font-bold mb-6 text-blue-700 border-b-2 pb-3 border-blue-100">6. 회고 (배운 점 및 개선점)</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="bg-green-50 p-8 rounded-xl shadow-md border-l-4 border-green-400">
+                                <h4 class="text-2xl font-bold mb-4 text-green-800">배운 점</h4>
+                                <!-- TODO: 이 곳에 '배운 점' 내용을 구체적으로 입력하세요. --><p class="text-lg text-gray-700 leading-relaxed italic">
+                                    MSA 환경에서 비동기 메시징 시스템(Kafka)을 효과적으로 활용하는 방법과 SAGA 패턴을 통한 분산 트랜잭션 관리의 중요성을 깊이 이해했습니다. 특히, 생성형 AI를 단순한 챗봇이 아닌 시스템 백엔드 로직(프롬프트 생성)에 통합하는 과정에서 엔지니어링의 새로운 가능성을 보았습니다. SDD가 개발 초기 단계의 명확성을 확보하고 변경 비용을 줄이는 데 얼마나 큰 도움이 되는지 체감할 수 있었습니다.
+                                </p>
+                            </div>
+                            <div class="bg-yellow-50 p-8 rounded-xl shadow-md border-l-4 border-yellow-400">
+                                <h4 class="text-2xl font-bold mb-4 text-yellow-800">개선점</h4>
+                                <!-- TODO: 이 곳에 '개선점' 내용을 구체적으로 입력하세요. --><p class="text-lg text-gray-700 leading-relaxed italic">
+                                    현재는 외부 API 호출에 실패했을 때의 Fallback 정책이 다소 단순한데, 향후에는 서킷 브레이커 패턴을 도입하여 시스템 안정성을 더욱 높이고 싶습니다. 또한, 대규모 트래픽 발생 시 시스템 부하 테스트와 성능 최적화에 대한 경험을 더 쌓아야겠다고 생각합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact 섹션 --><section id="contact" class="py-24 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center fade-in">
+                <h2 class="text-4xl font-bold mb-10">Contact Me</h2>
+                <p class="text-xl mb-12 opacity-90 leading-relaxed">
+                    생성형 AI 기술과 아키텍처 설계에 대한 논의나 협업 제안은 언제든지 환영합니다. <br> 아래 채널을 통해 편하게 연락주세요.
+                </p>
+                <div class="flex flex-wrap justify-center items-center gap-8 max-w-2xl mx-auto">
+                    <!-- 이메일 --><a href="mailto:syt1128@dongyang.ac.kr" class="flex items-center bg-blue-700 hover:bg-blue-600 text-white px-8 py-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                        <svg class="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                        syt1128@dongyang.ac.kr
+                    </a>
+                    <!-- GitHub --><a href="https://github.com/ghkdtjfxkd" target="_blank" rel="noopener noreferrer" class="flex items-center bg-gray-700 hover:bg-gray-600 text-white px-8 py-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                        <svg class="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 24 5.67 18.63 0 12 0Z"/></svg>
+                        GitHub
+                    </a>
+                    <!-- LinkedIn (선택 사항) --><a href="https://linkedin.com/in/username" target="_blank" rel="noopener noreferrer" class="flex items-center bg-blue-800 hover:bg-blue-700 text-white px-8 py-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                        <svg class="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LinkedIn"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 --><footer class="bg-gray-900 text-gray-400 py-10">
+        <div class="container mx-auto px-6 text-center text-lg">
+            <p>&copy; 2025 손영탁. 모든 권리 보유.</p>
+            <p class="mt-2">Created with passion for AI & Architecture.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 섹션이 뷰포트에 들어올 때 fade-in 효과 적용
+        const faders = document.querySelectorAll('.fade-in');
+
+        const appearOptions = {
+            threshold: 0.3, // 뷰포트의 30%가 보일 때 효과 시작
+            rootMargin: "0px 0px -50px 0px" // 바닥에서 50px 위로 올라올 때
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('show');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
